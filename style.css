@@ -1,0 +1,176 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #00d4ff;
+  letter-spacing: 1px;
+}
+
+.container-series {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: #1e1e1e;
+  width: 140px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.1);
+  transition: transform 0.3s;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 212, 255, 0.25);
+}
+
+.card img.thumb {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.card h2 {
+  font-size: 0.95em;
+  color: #ffd700;
+  margin-top: 2px;
+}
+
+/* Lista de episódios */
+.lista-episodios {
+  background-color: #1b1b1b;
+  border-left: 4px solid #00d4ff;
+  padding: 16px 24px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  display: none;
+}
+
+.lista-episodios ul {
+  list-style: none;
+}
+
+.lista-episodios li {
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+
+.lista-episodios a {
+  color: #00d4ff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.lista-episodios a:hover {
+  text-decoration: underline;
+}
+
+/* Botão Drive */
+.ver-pasta {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #00d4ff;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.ver-pasta:hover {
+  background-color: #00a9c5;
+  color: #fff;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .card {
+    width: 45%;
+  }
+
+  .card img.thumb {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+}
+.rodape {
+  margin-top: 60px;
+  text-align: center;
+  padding: 25px 15px;
+  background-color: #1a1a1a;
+  border-top: 1px solid #333;
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+.rodape a {
+  color: #00d4ff;
+  text-decoration: none;
+}
+
+.rodape a:hover {
+  text-decoration: underline;
+}
+
+.rodape .apoio {
+  margin-top: 10px;
+  font-style: italic;
+  color: #ffd700;
+}
+.rodape {
+  margin-top: 60px;
+  text-align: center;
+  padding: 25px 15px;
+  background-color: #1a1a1a;
+  border-top: 1px solid #333;
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+.rodape a {
+  color: #00d4ff;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.rodape a:hover {
+  text-decoration: underline;
+}
+
+.rodape .apoio {
+  margin-top: 10px;
+  font-style: italic;
+  color: #ffd700;
+}
+
+.rodape .icon {
+  vertical-align: middle;
+  margin-right: 6px;
+}

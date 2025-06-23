@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Minhas Séries</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-anime">
+    <h1>Séries para Download</h1>
+
+    <div class="container-series">
+      <!-- Afro Samurai -->
+      <div class="card" onclick="toggleEpisodios('afro')">
+        <img src="afro.jpg" alt="Afro Samurai" class="thumb">
+        <h2>Afro Samurai</h2>
+      </div>
+
+      <!-- Undead Unluck -->
+      <div class="card" onclick="toggleEpisodios('undead')">
+        <img src="undead.jpg" alt="Undead Unluck" class="thumb">
+        <h2>Undead Unluck</h2>
+      </div>
+
+      <!-- Avatar -->
+      <div class="card" onclick="toggleEpisodios('avatar')">
+        <img src="avatar.jpg" alt="Avatar" class="thumb">
+        <h2>Avatar</h2>
+      </div>
+
+      <!-- Prison School -->
+      <div class="card" onclick="toggleEpisodios('prison')">
+        <img src="prison.jpg" alt="Prison School" class="thumb">
+        <h2>Prison School</h2>
+      </div>
+    </div>
+
+    <!-- Lista de episódios Afro Samurai -->
+    <div class="lista-episodios" id="afro">
+      <ul>
+        <li>Episódio 1 — <a href="https://drive.google.com/uc?export=download&id=1f1ALVhcKvrL261OEnz7hx6sPFZOfQ6Nh" target="_blank">Baixar</a></li>
+        <li>Episódio 2 — <a href="https://drive.google.com/uc?export=download&id=1jB3V1zfAULqixhp4NuZhP7JKMMcfRxaH" target="_blank">Baixar</a></li>
+        <li>Episódio 3 — <a href="https://drive.google.com/uc?export=download&id=1rXRSk25DN3bi-gAuo9IxLDxNkjyBg7ct" target="_blank">Baixar</a></li>
+        <li>Episódio 4 — <a href="https://drive.google.com/uc?export=download&id=1lOQzKSMV7yphzU2l7ObJRS3HH24SZunP" target="_blank">Baixar</a></li>
+        <li>Episódio 5 — <a href="https://drive.google.com/uc?export=download&id=1uLJb9m_68RtWLOx4DEXcdQGfE6RdRsto" target="_blank">Baixar</a></li>
+      </ul>
+    </div>
+
+    <!-- Lista Undead Unluck -->
+    <div class="lista-episodios" id="undead">
+      <ul>
+        <li>Episódio 1 — <a href="#" target="_blank">Baixar</a></li>
+      </ul>
+      <a class="ver-pasta" href="https://drive.google.com/drive/folders/1GUiV5ReJqx9cn5MwVZ7ZI1iEx-xlkf69?usp=drive_link" target="_blank">📂 Ver todos os episódios no Drive</a>
+    </div>
+
+    <!-- Lista Avatar -->
+    <div class="lista-episodios" id="avatar">
+      <ul>
+        <li>Episódio 1 — <a href="#" target="_blank">Baixar</a></li>
+      </ul>
+      <a class="ver-pasta" href="#" target="_blank">📂 Ver todos os episódios no Drive</a>
+    </div>
+
+    <!-- Lista Prison School -->
+    <div class="lista-episodios" id="prison">
+      <ul>
+        <li>Episódio 1 — <a href="#" target="_blank">Baixar</a></li>
+      </ul>
+      <a class="ver-pasta" href="#" target="_blank">📂 Ver todos os episódios no Drive</a>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <p>📩 Sugestões de novas séries ou dúvidas? Fale comigo:</p>
+    <p><strong>Email:</strong> <a href="mailto:ivomicroship@gmail.com">ivomicroship@gmail.com</a></p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/258875707624" target="_blank">+258 875707624</a></p>
+
+    <p class="apoio">💖 Apoie o projeto e ajude a manter o site no ar!</p>
+  </footer>
+
+  <script>
+    function toggleEpisodios(id) {
+      const div = document.getElementById(id);
+      div.style.display = div.style.display === "none" ? "block" : "none";
+    }
+  </script>
+</body>
+</html>
