@@ -7,65 +7,119 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #121212;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #ffffff;
   min-height: 100vh;
   padding: 40px 20px;
+  background-attachment: fixed;
 }
 
+/* Títulos */
 h1 {
   text-align: center;
-  font-size: 2.5em;
-  margin-bottom: 40px;
-  color: #00d4ff;
-  letter-spacing: 1px;
+  font-size: 2.8em;
+  margin-bottom: 50px;
+  color: #00eaff;
+  letter-spacing: 1.2px;
+  text-shadow: 0 0 10px rgba(0, 234, 255, 0.3);
 }
 
+h2 {
+  text-align: center;
+  margin: 40px 0 20px;
+  color: #00d4ff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Destaques / Carrossel */
+.destaques {
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+.titulo-destaque {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.carrossel {
+  position: relative;
+  overflow: hidden;
+  height: 240px;
+  border-radius: 15px;
+  border: 2px solid #00eaff;
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+.slide {
+  display: none;
+  height: 100%;
+  animation: fade 1s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Cards */
 .container-series {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .card {
-  background: #1e1e1e;
-  width: 140px;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.1);
-  transition: transform 0.3s;
+  background: rgba(255, 255, 255, 0.05);
+  width: 160px;
+  padding: 12px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
   cursor: pointer;
 }
 
 .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 25px rgba(0, 212, 255, 0.25);
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 212, 255, 0.4);
 }
 
 .card img.thumb {
   width: 100%;
-  border-radius: 6px;
-  margin-bottom: 6px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .card h2 {
   font-size: 0.95em;
   color: #ffd700;
-  margin-top: 2px;
 }
 
-/* Lista de episódios */
+/* Episódios */
 .lista-episodios {
-  background-color: #1b1b1b;
+  background: rgba(0, 0, 0, 0.6);
   border-left: 4px solid #00d4ff;
-  padding: 16px 24px;
-  border-radius: 10px;
-  max-width: 500px;
-  margin: 0 auto 40px auto;
+  padding: 20px 28px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto 50px auto;
   display: none;
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.1);
 }
 
 .lista-episodios ul {
@@ -73,12 +127,12 @@ h1 {
 }
 
 .lista-episodios li {
-  margin-bottom: 10px;
-  font-size: 0.95em;
+  margin-bottom: 12px;
+  font-size: 1em;
 }
 
 .lista-episodios a {
-  color: #00d4ff;
+  color: #00eaff;
   text-decoration: none;
   font-weight: bold;
   margin-left: 5px;
@@ -88,74 +142,62 @@ h1 {
   text-decoration: underline;
 }
 
-/* Botão Drive */
+.descricao {
+  font-size: 0.95em;
+  margin-bottom: 18px;
+  color: #cccccc;
+}
+
+/* Estrelas */
+.estrelas {
+  color: #888;
+  font-size: 1.4em;
+  margin-bottom: 15px;
+}
+
+.estrelas span {
+  cursor: pointer;
+  color: #444;
+  transition: color 0.3s;
+}
+
+.estrelas span:hover,
+.estrelas span.selecionada {
+  color: gold;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+/* Botão de download */
 .ver-pasta {
   display: inline-block;
-  margin-top: 15px;
-  background-color: #00d4ff;
-  color: #000;
-  padding: 8px 16px;
-  border-radius: 8px;
+  margin-top: 18px;
+  background: linear-gradient(135deg, #00eaff, #007788);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
   font-weight: bold;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: background 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 212, 255, 0.2);
 }
 
 .ver-pasta:hover {
-  background-color: #00a9c5;
-  color: #fff;
+  background: linear-gradient(135deg, #00b5cc, #005f66);
 }
 
-/* Responsivo */
-@media (max-width: 600px) {
-  .card {
-    width: 45%;
-  }
-
-  .card img.thumb {
-    width: 100%;
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-}
+/* Rodapé */
 .rodape {
-  margin-top: 60px;
+  margin-top: 70px;
   text-align: center;
-  padding: 25px 15px;
-  background-color: #1a1a1a;
+  padding: 30px 20px;
+  background-color: #0f2027;
   border-top: 1px solid #333;
-  font-size: 0.95em;
-  color: #ccc;
+  font-size: 1em;
+  color: #bbbbbb;
 }
 
 .rodape a {
-  color: #00d4ff;
-  text-decoration: none;
-}
-
-.rodape a:hover {
-  text-decoration: underline;
-}
-
-.rodape .apoio {
-  margin-top: 10px;
-  font-style: italic;
-  color: #ffd700;
-}
-.rodape {
-  margin-top: 60px;
-  text-align: center;
-  padding: 25px 15px;
-  background-color: #1a1a1a;
-  border-top: 1px solid #333;
-  font-size: 0.95em;
-  color: #ccc;
-}
-
-.rodape a {
-  color: #00d4ff;
+  color: #00eaff;
   text-decoration: none;
   margin-left: 5px;
 }
@@ -165,12 +207,32 @@ h1 {
 }
 
 .rodape .apoio {
-  margin-top: 10px;
+  margin-top: 12px;
   font-style: italic;
   color: #ffd700;
 }
 
-.rodape .icon {
-  vertical-align: middle;
-  margin-right: 6px;
+/* Responsividade */
+@media (max-width: 768px) {
+  .card {
+    width: 45%;
+  }
+
+  .carrossel {
+    height: 180px;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 90%;
+  }
+
+  .carrossel {
+    height: 150px;
+  }
 }
