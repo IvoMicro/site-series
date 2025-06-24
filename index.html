@@ -1,90 +1,170 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Minhas Séries</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="background-anime">
     <h1>Séries para Download</h1>
 
+    <!-- Destaques -->
+    <section class="destaques">
+      <h2 class="titulo-destaque">🎬 Destaques</h2>
+      <div class="carrossel">
+        <div class="slide"><img src="undead.jpg" alt="Undead Unluck" /></div>
+        <div class="slide"><img src="prison.jpg" alt="Avatar" /></div>
+        <div class="slide"><img src="beekeeper.jpg" alt="Beekeeper" /></div>
+      
+      </div>
+    </section>
+
+    <!-- Séries -->
     <div class="container-series">
-      <!-- Afro Samurai -->
       <div class="card" onclick="toggleEpisodios('afro')">
-        <img src="afro.jpg" alt="Afro Samurai" class="thumb">
+        <img src="afro.jpg" alt="Afro Samurai" class="thumb" />
         <h2>Afro Samurai</h2>
       </div>
-
-      <!-- Undead Unluck -->
       <div class="card" onclick="toggleEpisodios('undead')">
-        <img src="undead.jpg" alt="Undead Unluck" class="thumb">
+        <img src="undead.jpg" alt="Undead Unluck" class="thumb" />
         <h2>Undead Unluck</h2>
       </div>
-
-      <!-- Avatar -->
       <div class="card" onclick="toggleEpisodios('avatar')">
-        <img src="avatar.jpg" alt="Avatar" class="thumb">
+        <img src="avatar.jpg" alt="Avatar" class="thumb" />
         <h2>Avatar</h2>
       </div>
-
-      <!-- Prison School -->
       <div class="card" onclick="toggleEpisodios('prison')">
-        <img src="prison.jpg" alt="Prison School" class="thumb">
+        <img src="prison.jpg" alt="Prison School" class="thumb" />
         <h2>Prison School</h2>
       </div>
     </div>
 
-    <!-- Lista de episódios Afro Samurai -->
+    <!-- Episódios e descrições -->
     <div class="lista-episodios" id="afro">
+      <p class="descricao">Um guerreiro solitário enfrenta seu passado em busca de vingança e honra.</p>
       <ul>
-        <li>Episódio 1 — <a href="https://drive.google.com/uc?export=download&id=1f1ALVhcKvrL261OEnz7hx6sPFZOfQ6Nh" target="_blank">Baixar</a></li>
-        <li>Episódio 2 — <a href="https://drive.google.com/uc?export=download&id=1jB3V1zfAULqixhp4NuZhP7JKMMcfRxaH" target="_blank">Baixar</a></li>
-        <li>Episódio 3 — <a href="https://drive.google.com/uc?export=download&id=1rXRSk25DN3bi-gAuo9IxLDxNkjyBg7ct" target="_blank">Baixar</a></li>
-        <li>Episódio 4 — <a href="https://drive.google.com/uc?export=download&id=1lOQzKSMV7yphzU2l7ObJRS3HH24SZunP" target="_blank">Baixar</a></li>
-        <li>Episódio 5 — <a href="https://drive.google.com/uc?export=download&id=1uLJb9m_68RtWLOx4DEXcdQGfE6RdRsto" target="_blank">Baixar</a></li>
+        <li>Episódio 1 — <a href="https://drive.google.com/drive/folders/1RMtbxJH5AgGG_zSN-Wcy7b1aMUKOit-1?usp=sharing" target="_blank">Baixar</a></li>
       </ul>
     </div>
 
-    <!-- Lista Undead Unluck -->
     <div class="lista-episodios" id="undead">
+      <p class="descricao">Uma jovem azarada e um homem imortal cruzam o mundo enfrentando sociedades misteriosas.</p>
       <ul>
-        <li>Episódio 1 — <a href="#" target="_blank">Baixar</a></li>
+        <li>Episódio 1 — <a href="https://drive.google.com/drive/folders/1WaaS14kjnZlWoyWIi-edraa1UYXXRn9X?usp=sharing" target="_blank">Baixar</a></li>
       </ul>
-      <a class="ver-pasta" href="https://drive.google.com/drive/folders/1GUiV5ReJqx9cn5MwVZ7ZI1iEx-xlkf69?usp=drive_link" target="_blank">📂 Ver todos os episódios no Drive</a>
     </div>
 
-    <!-- Lista Avatar -->
     <div class="lista-episodios" id="avatar">
+      <p class="descricao">Um jovem mestre do ar precisa dominar os quatro elementos para salvar o mundo.</p>
       <ul>
         <li>Episódio 1 — <a href="#" target="_blank">Baixar</a></li>
       </ul>
-      <a class="ver-pasta" href="#" target="_blank">📂 Ver todos os episódios no Drive</a>
     </div>
 
-    <!-- Lista Prison School -->
     <div class="lista-episodios" id="prison">
+      <p class="descricao">Cinco rapazes enfrentam punições hilárias em uma escola rígida feminina.</p>
       <ul>
-        <li>Episódio 1 — <a href="#" target="_blank">Baixar</a></li>
+        <li>Episódio 1 — <a href="https://drive.google.com/drive/folders/1QS8c8myMbXm3j3XyOhwPEXfDDbdiz1ZB?usp=sharing" target="_blank">Baixar</a></li>
       </ul>
-      <a class="ver-pasta" href="#" target="_blank">📂 Ver todos os episódios no Drive</a>
+    </div>
+
+    <!-- Filmes -->
+    <h2 class="secao-filmes">Filmes Recentes</h2>
+    <div class="container-series">
+      <div class="card" onclick="toggleEpisodios('agente')">
+        <img src="agentes.JFIF" alt="Agente X" class="thumb" />
+        <h2>Agente X: A Última Missão</h2>
+      </div>
+      <div class="card" onclick="toggleEpisodios('beekeeper')">
+        <img src="beekeeper.jpg" alt="Beekeeper" class="thumb" />
+        <h2>Beekeeper: Rede de Vingança</h2>
+      </div>
+      <div class="card" onclick="toggleEpisodios('noiva')">
+        <img src="noiva.JPG" alt="O Preço da Noiva" class="thumb" />
+        <h2>O Preço da Noiva</h2>
+      </div>
+      <div class="card" onclick="toggleEpisodios('lugar')">
+        <img src="lugar.JPG" alt="Lugar silencioso" class="thumb" />
+        <h2>Um Lugar Silencioso</h2>
+      </div>
+    </div>
+
+    <!-- Filmes: descrições e estrelas -->
+    <div class="lista-episodios" id="agente">
+      <p class="descricao">Um agente secreto aposentado é chamado para uma última missão que pode mudar o destino do mundo.</p>
+      <div class="estrelas">Avaliação:
+        <span onclick="avaliar(this)">★</span><span onclick="avaliar(this)">★</span>
+        <span onclick="avaliar(this)">★</span><span onclick="avaliar(this)">★</span>
+        <span onclick="avaliar(this)">★</span>
+      </div>
+      <a class="ver-pasta" href="https://drive.google.com/uc?export=download&id=1LM2ja6EVs0ZbiY83eo0U1NQxfHTg7IZR" target="_blank">📂 Assistir ou Baixar</a>
+    </div>
+
+    <div class="lista-episodios" id="beekeeper">
+      <p class="descricao">Um justiceiro volta à ativa para desmantelar uma rede internacional de corrupção e vingança.</p>
+      <div class="estrelas">Avaliação:
+        <span onclick="avaliar(this)">★</span><span onclick="avaliar(this)">★</span>
+        <span onclick="avaliar(this)">★</span><span onclick="avaliar(this)">★</span>
+        <span onclick="avaliar(this)">★</span>
+      </div>
+      <a class="ver-pasta" href="https://drive.google.com/uc?export=download&id=1dGe83a-G1GjnFd_7Z4cjMJ8WDqEb3zcc" target="_blank">📂 Assistir ou Baixar</a>
+    </div>
+
+    <div class="lista-episodios" id="noiva">
+      <p class="descricao">O que era um casamento de conveniência se torna um turbilhão de emoções.</p>
+      <div class="estrelas">Avaliação:
+        <span onclick="avaliar(this)">★</span><span onclick="avaliar(this)">★</span>
+        <span onclick="avaliar(this)">★</span><span onclick="avaliar(this)">★</span>
+        <span onclick="avaliar(this)">★</span>
+      </div>
+      <a class="ver-pasta" href="https://drive.google.com/file/d/10tbOzQumoiM-m6JzI0RPjXGcEZVttGjp/view?usp=sharing" target="_blank">📂 Assistir ou Baixar</a>
+    </div>
+
+    <div class="lista-episodios" id="lugar">
+      <p class="descricao"></p>
+      <div class="estrelas">Avaliação:
+        <span onclick="avaliar(this)">★</span><span onclick="avaliar(this)">★</span>
+        <span onclick="avaliar(this)">★</span><span onclick="avaliar(this)">★</span>
+        <span onclick="avaliar(this)">★</span>
+      </div>
+      <a class="ver-pasta" href="https://drive.google.com/file/d/1VoSZcW8Z9TdT4EaF_xvbQVtos32asTDD/view?usp=sharing" target="_blank">📂 Assistir ou Baixar</a>
     </div>
   </div>
 
-  <!-- Rodapé -->
-  <footer class="rodape">
-    <p>📩 Sugestões de novas séries ou dúvidas? Fale comigo:</p>
-    <p><strong>Email:</strong> <a href="mailto:ivomicroship@gmail.com">ivomicroship@gmail.com</a></p>
-    <p><strong>WhatsApp:</strong> <a href="https://wa.me/258875707624" target="_blank">+258 875707624</a></p>
+     <!-- Rodapé -->
+    <footer class="rodape">
+      <p>📩 Sugestões de novas séries ou dúvidas? Fale comigo:</p>
+      <p><strong>Email:</strong> <a href="mailto:ivomicroship@gmail.com">ivomicroship@gmail.com</a></p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/258875707624" target="_blank">+258 875707624</a></p>
+      <p class="apoio">💖 Apoie o projeto e ajude a manter o site no ar!</p>
+    </footer>
 
-    <p class="apoio">💖 Apoie o projeto e ajude a manter o site no ar!</p>
-  </footer>
+    <!-- Scripts -->
+    <script>
+      function toggleEpisodios(id) {
+        document.querySelectorAll('.lista-episodios').forEach(div => {
+          div.style.display = (div.id === id && div.style.display !== 'block') ? 'block' : 'none';
+        });
+      }
 
-  <script>
-    function toggleEpisodios(id) {
-      const div = document.getElementById(id);
-      div.style.display = div.style.display === "none" ? "block" : "none";
-    }
-  </script>
+      function avaliar(star) {
+        const estrelas = star.parentElement.querySelectorAll('span');
+        estrelas.forEach((s, i) => {
+          s.classList.toggle('selecionada', i <= [...estrelas].indexOf(star));
+        });
+      }
+
+      // Carrossel automático
+      let slideIndex = 0;
+      setInterval(() => {
+        const slides = document.querySelectorAll('.carrossel .slide');
+        slides.forEach((slide, i) => {
+          slide.style.display = i === slideIndex ? 'block' : 'none';
+        });
+        slideIndex = (slideIndex + 1) % slides.length;
+      }, 3000);
+    </script>
+  </div>
 </body>
 </html>
